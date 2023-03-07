@@ -61,6 +61,10 @@ serve as a template/example for developing simple bare metal code
 ### sunxi-pio
 Manipulate PIO registers/dumps
 
+NOTE: When using sunxi-pio to set PIN with new mode, the format should be quoted, such as:
+`sunxi-pio -m PB3 "<`mode`><`pull`><`drive`><`data`>"`
+because the bare `<` is special character in shell environment - bash will complain it.
+
 ### sunxi-nand-part
 Tool for manipulating Allwinner NAND partition tables
 
